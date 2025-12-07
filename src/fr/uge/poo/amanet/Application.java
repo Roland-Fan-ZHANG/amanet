@@ -21,5 +21,7 @@ public class Application {
         var product = new Product("Avatar", 2009);
         var dvd = new Dvd(product, 1, Set.of(Language.FRENCH, Language.ENGLISH));
         System.out.println(dvd.getLongDescription());
+        System.out.println(dvd.getShortDescription());
+        //System.out.println(dvd.price());
     }
 }
