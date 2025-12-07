@@ -14,14 +14,18 @@ public final class BluRay implements Item {
         this.product = Objects.requireNonNull(product);
         this.languages = Set.copyOf(languages);
         this.is3D = is3D;
+        super();
     }
     @Override
     public String getShortDescription() {
         return product.toString();
     }
-
     @Override
     public String getLongDescription() {
         return "BLU-RAY : " + product.toString() + "\nAudio : " + languages.toString() + "\n3D : " + is3D;
+    }
+    @Override
+    public int price() {
+        return function.applyAsInt(this);
     }
 }
